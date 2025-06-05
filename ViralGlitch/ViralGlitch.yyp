@@ -36,6 +36,7 @@
   "name":"ViralGlitch",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"apnwin41241","path":"sprites/apnwin41241/apnwin41241.yy",},},
     {"id":{"name":"Julian","path":"sprites/Julian/Julian.yy",},},
     {"id":{"name":"Tobii2","path":"sprites/Tobii2/Tobii2.yy",},},
   ],
