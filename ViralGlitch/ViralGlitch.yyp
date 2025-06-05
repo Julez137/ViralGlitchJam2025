@@ -36,6 +36,7 @@
   "name":"ViralGlitch",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Julian","path":"sprites/Julian/Julian.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
