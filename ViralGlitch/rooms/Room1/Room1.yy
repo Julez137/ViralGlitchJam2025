@@ -6,12 +6,12 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_44CA453E","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_116D908F","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_44CA453E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44CA453E","objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":544.0,},
+        {"$GMRInstance":"v2","%Name":"inst_116D908F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_116D908F","objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":96.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"PowerStation_Walls","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRTileLayer":"","%Name":"PowerStation_Background","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"PowerStation_Background","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":24,"SerialiseWidth":43,"TileCompressedData":[
@@ -57,15 +57,15 @@
       ],"name":"PowerStation_Walls","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":24,"SerialiseWidth":43,"TileCompressedData":[
           1,4,-41,17,2,5,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,
           2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,
-          -2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,2,8,10,-41,-2147483648,
-          2,8,10,-3,17,-38,-2147483648,4,8,10,0,0,-6,-2147483648,1,0,-32,-2147483648,2,8,10,-8,-2147483648,1,17,
-          -32,-2147483648,2,8,10,-41,-2147483648,2,8,12,-41,1,5,13,36,36,37,44,-4,36,4,9,37,36,37,-3,36,21,37,
-          44,36,37,36,44,37,36,44,36,44,36,36,37,36,37,36,36,37,36,44,-8,36,33,44,36,9,36,37,36,9,44,9,36,37,36,
-          44,9,36,36,9,36,44,36,36,44,36,36,44,44,36,36,44,36,36,44,36,-3,44,4,37,36,37,44,-6,36,53,44,36,36,44,
-          36,36,44,44,36,36,9,37,44,36,44,36,37,44,44,37,9,36,9,44,9,44,9,44,37,36,36,37,44,37,36,36,44,36,37,
-          36,44,36,44,36,36,9,36,37,44,36,36,44,37,-3,36,15,44,36,37,36,9,36,36,44,36,37,44,36,37,44,44,-3,36,
-          6,37,36,36,44,44,37,-4,36,1,37,-3,36,1,44,-3,36,1,44,-3,36,12,44,36,44,36,9,36,36,44,36,37,36,9,-6,36,
-          1,44,-3,36,-2,44,-2,36,3,37,36,36,
+          -2147483648,2,8,10,-41,-2147483648,2,8,10,-28,-2147483648,-5,9,-8,-2147483648,2,8,10,-15,-2147483648,
+          -7,9,-19,-2147483648,2,8,10,-41,-2147483648,2,8,10,-3,0,-3,-2147483648,-6,9,-29,-2147483648,4,8,10,0,
+          0,-6,-2147483648,1,0,-32,-2147483648,2,8,10,-8,-2147483648,1,0,-32,-2147483648,2,8,10,-41,-2147483648,
+          2,8,12,-41,1,5,13,36,36,37,44,-4,36,4,9,37,36,37,-3,36,21,37,44,36,37,36,44,37,36,44,36,44,36,36,37,
+          36,37,36,36,37,36,44,-8,36,33,44,36,9,36,37,36,9,44,9,36,37,36,44,9,36,36,9,36,44,36,36,44,36,36,44,
+          44,36,36,44,36,36,44,36,-3,44,4,37,36,37,44,-6,36,53,44,36,36,44,36,36,44,44,36,36,9,37,44,36,44,36,
+          37,44,44,37,9,36,9,44,9,44,9,44,37,36,36,37,44,37,36,36,44,36,37,36,44,36,44,36,36,9,36,37,44,36,36,
+          44,37,-3,36,15,44,36,37,36,9,36,36,44,36,37,44,36,37,44,44,-3,36,6,37,36,36,44,44,37,-4,36,1,37,-3,36,
+          1,44,-3,36,1,44,-3,36,12,44,36,44,36,9,36,36,44,36,37,36,9,-6,36,1,44,-3,36,-2,44,-2,36,3,37,36,36,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tileset_PowerStation","path":"tilesets/tileset_PowerStation/tileset_PowerStation.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":300,"effectEnabled":true,"effectType":"_filter_blocks","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[
         {"name":"g_BlocksPosition","type":0,"value":"0",},

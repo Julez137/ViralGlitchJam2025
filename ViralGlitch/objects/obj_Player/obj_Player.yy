@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Player",
-    "path":"sprites/spr_Player/spr_Player.yy",
+    "name":"spr_PlayerSlime",
+    "path":"sprites/spr_PlayerSlime/spr_PlayerSlime.yy",
   },
   "spriteMaskId":null,
   "visible":true,

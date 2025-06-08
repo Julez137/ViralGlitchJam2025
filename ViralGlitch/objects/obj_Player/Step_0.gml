@@ -1,5 +1,5 @@
-#region Falling
-//Falling
+// Calculate gravity and movement for next frame
+// Calculate gravity
 if (current_velocity_y < max_falling_speed)
 {
 	current_velocity_y += falling_rate; // Accelerate falling speed
@@ -8,74 +8,62 @@ if (current_velocity_y < max_falling_speed)
 	current_velocity_y = max_falling_speed; // Cap falling speed
 }
 
-new_y = y + current_velocity_y;
-
-check_ceiling_floor_collision();
-
-function check_ceiling_floor_collision()
+// Calculate Movement
+if keyboard_check(ord("A"))
 {
-	// Check collision with tiles at the new position
-	// We check multiple points along the bottom of the player sprite
-	// Vertical collision detection
-	
-	var check_points = 3; // Number of points to check along the bottom
-
-	for (var i = 0; i < check_points; i++)
-	{
-		var check_x = x - sprite_width/2 + (sprite_width * i / (check_points - 1));
-		var check_bottom_y = new_y + sprite_height/2; // Bottom of sprite
-		var check_top_y = new_y - sprite_height/2; // Top of sprite
-    
-		// Get the tile at this position
-		var tile_data_bottom = tilemap_get_at_pixel(wall_tilemap, check_x, check_bottom_y);
-		var tile_data_top = tilemap_get_at_pixel(wall_tilemap, check_x, check_top_y);
-    
-		// If there's a tile (tile_data > 0), we have a collision
-		if (tile_data_bottom > 0)
-		{
-			floor_hit();
-			break;
-		}else if (tile_data_top > 0)
-		{
-			ceiling_hit();
-			break;
-		}else{
-			can_jump = false;
-			y = new_y;
-		}
-	}
+	current_velocity_x = -movement_speed;
+}else if keyboard_check(ord("D"))
+{
+	current_velocity_x = movement_speed;
+}else
+{
+	current_velocity_x = 0;
 }
 
-function ceiling_hit()
+var new_velocity = new Vector2(x + current_velocity_x, y + current_velocity_y);
+
+// Draw collider bounding box
+var top_left_col = new Vector2(new_velocity.x - (sprite_width/2), new_velocity.y - (sprite_height/2));
+var top_right_col = new Vector2(new_velocity.x + (sprite_width/2), new_velocity.y - (sprite_height/2));
+var bottom_left_col = new Vector2(new_velocity.x - (sprite_width/2), new_velocity.y + (sprite_height/2));
+var bottom_right_col = new Vector2(new_velocity.x + (sprite_width/2), new_velocity.y + (sprite_height/2));
+var bottom_center_col = new Vector2(new_velocity.x, new_velocity.y + (sprite_height/2));
+
+// Check collisions for each scenario
+var tiledata_top_left = tilemap_get_at_pixel(wall_tilemap, top_left_col.x, top_left_col.y);
+var tiledata_top_right = tilemap_get_at_pixel(wall_tilemap, top_right_col.x, top_right_col.y);
+var tiledata_bottom_left = tilemap_get_at_pixel(wall_tilemap, bottom_left_col.x, bottom_left_col.y);
+var tiledata_bottom_right = tilemap_get_at_pixel(wall_tilemap, bottom_right_col.x, bottom_right_col.y);
+var tiledate_bottom_center = tilemap_get_at_pixel(wall_tilemap, bottom_center_col.x, bottom_center_col.y);
+
+// Apply values according to each scenario
+// Gravity
+if (tiledata_bottom_left > 0 || tiledata_bottom_right > 0) // bottom touching ground
 {
 	current_velocity_y = 0;
-}
-	
-function floor_hit()
-{
-	// Find the exact Y position to place the player on top of the tile
-    var tile_size = 32; // Adjust this to match your tile size
-    var tile_y = floor((new_y + sprite_height/2) / tile_size) * tile_size;
-    y = tile_y - sprite_height/2;
-    current_velocity_y = 0;
 	can_jump = true;
+}else
+{
+	can_jump = false;
 }
 
-#endregion
+// Ceiling
+if (tiledata_top_left > 0 || tiledata_top_right > 0)
+{
+	current_velocity_y = 0;	
+}
 
+if (tiledata_bottom_left > 0 || tiledata_bottom_right > 0
+	|| tiledata_top_left > 0 || tiledata_top_right > 0)
+{
+	current_velocity_x = 0;
+}
 
+x += current_velocity_x;
+y += current_velocity_y;
 
-
-
-
-
-
-
-
-
-
-
-if (x >= 2000 || y >= 2000)
+// If player somehow leaves scene
+if (x >= 2000 || y >= 2000 || x <= 0 || y <= 0)
 {
 	room_restart();
 }
