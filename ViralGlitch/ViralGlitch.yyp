@@ -36,11 +36,13 @@
   "name":"ViralGlitch",
   "resources":[
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
+    {"id":{"name":"obj_Water","path":"objects/obj_Water/obj_Water.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_Player","path":"sprites/spr_Player/spr_Player.yy",},},
     {"id":{"name":"spr_PlayerSlime","path":"sprites/spr_PlayerSlime/spr_PlayerSlime.yy",},},
     {"id":{"name":"spr_PowerStation_tileset","path":"sprites/spr_PowerStation_tileset/spr_PowerStation_tileset.yy",},},
     {"id":{"name":"spr_Test","path":"sprites/spr_Test/spr_Test.yy",},},
+    {"id":{"name":"spr_water","path":"sprites/spr_water/spr_water.yy",},},
     {"id":{"name":"tileset_PowerStation","path":"tilesets/tileset_PowerStation/tileset_PowerStation.yy",},},
   ],
   "resourceType":"GMProject",

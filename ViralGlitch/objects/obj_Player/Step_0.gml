@@ -1,3 +1,4 @@
+#region Movement
 // Calculate gravity and movement for next frame
 // Calculate gravity
 if (current_velocity_y < max_falling_speed)
@@ -61,7 +62,13 @@ if (tiledata_bottom_left > 0 || tiledata_bottom_right > 0
 
 x += current_velocity_x;
 y += current_velocity_y;
+#endregion
 
+#region Water Collision
+if (place_meeting(x, y, obj_Water)){
+	room_restart();
+}
+#endregion
 // If player somehow leaves scene
 if (x >= 2000 || y >= 2000 || x <= 0 || y <= 0)
 {
